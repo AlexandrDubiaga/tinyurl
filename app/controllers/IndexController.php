@@ -19,7 +19,7 @@ class IndexController extends BaseController
    {
       $link = Link::find($id);
       $url = $link->url;
-      return Redirect::to('/',array($id));
+      return Redirect::to($url);
    }
 }
 ?>
