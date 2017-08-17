@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('/','indexController@showIndex');
+Route::get('/','IndexController@showIndex');
 Route::post('/make-url','indexController@postUrl');
