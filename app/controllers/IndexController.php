@@ -11,8 +11,15 @@ class IndexController extends BaseController
     $link = new Link();
     $link->url = $url;
     $link->save();
-    return  View::make('index.link');
+    $shortUrl = URL::to('/',array($link->id));
+    return  View::make('index.link',array('link'=>$shortUrl));
    
   }
+   public function getRedirect($id)
+   {
+      $link = Link::find($id);
+      $url = $link->url;
+      return Redirect::to('/',array($id));
+   }
 }
 ?>
