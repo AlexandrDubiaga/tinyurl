@@ -5,7 +5,7 @@ class IndexController extends BaseController
   protected $linkRepo;
   public function __construct()
   {
-    $this->linkRepo = new LinkRepository;
+    $this->linkRepo = new LinkRepository();
   }
   public function showIndex()
   {
