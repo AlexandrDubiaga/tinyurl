@@ -55,12 +55,12 @@ return array(
 		'tinyurl' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'user2',
-			'username'  => 'user2',
-			'password'  => 'tuser2',
+			'database'  => 'user5',
+			'username'  => 'user5',
+			'password'  => 'tuser5',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => 'tinyurl',
+			'prefix'    => 'tinyurl_',
 		),
 
 		'pgsql' => array(
