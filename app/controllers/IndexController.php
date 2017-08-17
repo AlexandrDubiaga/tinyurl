@@ -3,9 +3,9 @@ use Tinyurl\Repository\LinkRepository;
 class IndexController extends BaseController
 {
   protected $linkRepo;
-  public function __construct()
+  public function __construct(LinkRepository $linkRepo)
   {
-    $this->linkRepo = new LinkRepository();
+    $this->linkRepo = $linkRepo;
   }
   public function showIndex()
   {
