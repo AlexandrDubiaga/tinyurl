@@ -55,9 +55,9 @@ return array(
 		'tinyurl' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'user5',
-			'username'  => 'user5',
-			'password'  => 'tuser5',
+			'database'  => 'user2',
+			'username'  => 'user2',
+			'password'  => 'tuser2',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => 'tinyurl_',
