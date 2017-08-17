@@ -10,6 +10,10 @@ class IndexController extends BaseController
     $url = Input::get('url');
     $rules = array('url'=>'required|url');
     $validator =  Validator::make(array('url'=>$url),$rules);
+   if($validator->fails)
+   {
+      return Redirect::to('/')->withErrors($validator);
+   }
     $link = new Link();
     $link->url = $url;
     $link->save();
