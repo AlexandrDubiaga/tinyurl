@@ -11,7 +11,7 @@ class IndexController extends BaseController
     $link = new Link();
     $link->url = $url;
     $link->save();
-    return  $link->id;
+    return  View::make('index.link');
    
   }
 }
