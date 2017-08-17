@@ -5,7 +5,7 @@ class IndexController extends BaseController
   {
     return View::make('index.index');
   }
- public function posturl()
+ public function postUrl()
   {
     $url = Input::get('url');
     $link = new Link();
