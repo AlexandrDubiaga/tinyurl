@@ -1,6 +1,12 @@
 <?php
+use Tinyurl\Repository\LinkRepository;
 class IndexController extends BaseController
 {
+  protected $linkRepo;
+  public function __construct()
+  {
+    $this->linkRepo = new LinkRepository;
+  }
   public function showIndex()
   {
     return View::make('index.index');
@@ -14,17 +20,18 @@ class IndexController extends BaseController
    {
       return Redirect::to('/')->withErrors($validator);
    }
-   $link = new \Link();
-   $link->url = $url;
-   $link->save(); 
-    $shortUrl = URL::to('/',array($link->id));
+    $id = $this->linkRepo->create($url);
+    $shortUrl = URL::to('/',array($id));
     return  View::make('index.link',array('link'=>$shortUrl));
    
   }
    public function getRedirect($id)
    {
-      $link = Link::find($id);
-      $url = $link->url;
+      $url = $this->linkRepo->find($id);
+     if(!$url)
+     {
+        $url = '/';
+     }
       return Redirect::to($url);
    }
 }
