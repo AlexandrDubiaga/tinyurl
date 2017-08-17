@@ -1,4 +1,4 @@
-class indexController extends BaseController
+class IndexController extends BaseController
 {
   public function showIndex()
   {
