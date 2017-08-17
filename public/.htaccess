@@ -1,10 +1,10 @@
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
-        Options -MultiViews
+        Options -MultiViews -Indexes
     </IfModule>
-
+	DirectoryIndex index.php
     RewriteEngine On
-
+	RewriteBase /~user2/tinyurl
     # Redirect Trailing Slashes...
     RewriteRule ^(.*)/$ /$1 [L,R=301]
 
