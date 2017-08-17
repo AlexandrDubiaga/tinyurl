@@ -1,5 +1,5 @@
 <?php
-namespace Tityurl\Repository;
+namespace Tinyurl\Repository;
 class LinkRepository
 {
     public function create($url)
