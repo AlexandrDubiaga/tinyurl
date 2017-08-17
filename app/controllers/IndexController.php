@@ -14,9 +14,9 @@ class IndexController extends BaseController
    {
       return Redirect::to('/')->withErrors($validator);
    }
-    $link = new Link();
-    $link->url = $url;
-    $link->save();
+   $link = new \Link();
+   $link->url = $url;
+   $link->save(); 
     $shortUrl = URL::to('/',array($link->id));
     return  View::make('index.link',array('link'=>$shortUrl));
    
