@@ -1,3 +1,4 @@
+<?php
 class IndexController extends BaseController
 {
   public function showIndex()
@@ -9,3 +10,4 @@ class IndexController extends BaseController
     $url = Input::get('url');
   }
 }
+?>
