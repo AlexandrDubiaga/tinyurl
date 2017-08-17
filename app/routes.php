@@ -12,4 +12,4 @@
 */
 
 Route::get('/','IndexController@showIndex');
-Route::post('/make-url','indexController@postUrl');
+Route::post('/make-url','IndexController@postUrl');
