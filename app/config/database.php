@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'tinyurl',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,15 +52,15 @@ return array(
 			'prefix'   => '',
 		),
 
-		'mysql' => array(
+		'tinyurl' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'forge',
-			'username'  => 'forge',
-			'password'  => '',
+			'database'  => 'user2',
+			'username'  => 'user2',
+			'password'  => 'tuser2',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
+			'prefix'    => 'tinyurl',
 		),
 
 		'pgsql' => array(
