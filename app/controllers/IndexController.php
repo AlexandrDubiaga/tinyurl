@@ -9,7 +9,7 @@ class IndexController extends BaseController
   {
     $url = Input::get('url');
     $link = new Link();
-    $link->url = $url
+    $link->url = $url;
     $link->save();
     return  $link->id;
    
