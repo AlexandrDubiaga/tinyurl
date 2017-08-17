@@ -8,6 +8,8 @@ class IndexController extends BaseController
  public function postUrl()
   {
     $url = Input::get('url');
+    $rules = array('url'=>'required|url');
+    $validator =  Validator::make(array('url'=>$url),$rules);
     $link = new Link();
     $link->url = $url;
     $link->save();
