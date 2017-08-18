@@ -1,6 +1,6 @@
 <?php
-namespace Tinyurl\Repository;
-class LinkRepository
+namespace Tinyurl\Repository\Link;
+class DbLinkRepository implements LinkRepositoryInterface
 {
     public function create($url)
     {
