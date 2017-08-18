@@ -11,7 +11,7 @@
     'email'=> Input::get('email'),
     'password'=> Input::get('password')
    );
-   if(Auth::attemp($data))
+   if(Auth::attempt($data))
    {
     return Redirect::intended('/');
    }
