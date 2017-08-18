@@ -1,9 +1,9 @@
 <?php
-use Tinyurl\Repository\LinkRepository;
+use Tinyurl\Repository\Link\LinkRepositoryInterface;
 class IndexController extends BaseController
 {
   protected $linkRepo;
-  public function __construct(LinkRepository $linkRepo)
+  public function __construct(LinkRepositoryInterface $linkRepo)
   {
     $this->linkRepo = $linkRepo;
   }
