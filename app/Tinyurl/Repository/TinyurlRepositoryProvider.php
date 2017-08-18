@@ -1,6 +1,6 @@
 <?php
 namespace Tinyurl\Repository;
-use IlLuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 class TinyurlRepositoryProvider extends ServiceProvider
 {
   public function register()
