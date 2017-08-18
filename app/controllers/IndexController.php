@@ -6,6 +6,8 @@ class IndexController extends BaseController
   public function __construct(LinkRepositoryInterface $linkRepo)
   {
     $this->linkRepo = $linkRepo;
+     $this->beforeFilter('auth');
+    
   }
   public function showIndex()
   {
